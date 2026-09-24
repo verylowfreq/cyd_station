@@ -1,5 +1,7 @@
 # CYD 情報ステーション
 
+<img src="images/cover.jpg" width="640px">
+
 Cheap Yellow Display（ESP32-2432S028 相当）をデスクに置く情報表示デバイスにするスケッチです。
 
 - NTP同期の時計（年・月・日・曜日・時・分・秒）
@@ -38,11 +40,7 @@ Arduino IDE の場合：
 - **Partition Scheme: `Huge APP (3MB No OTA/1MB SPIFFS)`** ← 必須
   （WiFi + WebServer + mDNS + LovyanGFX + 日本語フォントで約2.4MB。既定の
   1.25MBスロットには収まりません）
-- 必要ライブラリ: **なし**。LovyanGFX 1.2.29 を `src/LovyanGFX/` に同梱しているので、
-  ライブラリマネージャでの追加インストールは不要です（他はESP32コア同梱のもののみ）。
-  同梱した理由と加えた変更は `src/LovyanGFX/VENDORED.md` を参照してください。
-  端的には、LovyanGFX 1.2.0 は IDF 5.x で追加された `data_io_default_level` を
-  0xFF で埋めてしまい `spi_bus_initialize()` が失敗し、画面が真っ黒になります。
+- 必要ライブラリ: LovyanGFX
 
 arduino-cli の場合：
 
@@ -140,3 +138,7 @@ microSDのルートに `Album/` を作り、JPEGファイルを置きます（�
   背景ごと上書きしてちらつきを抑えています。
 - QRコードはLovyanGFX組み込みの `lcd.qrcode()` を使っています（外部ライブラリ不要）。
   Androidでは `.local` の名前解決が不安定なため、QRにはIPアドレスのURLを埋めています。
+
+## ライセンス
+
+MIT License (C) 2026 Mitsumine Suzu (verylowfreq)
