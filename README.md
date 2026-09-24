@@ -1,8 +1,8 @@
-# CYD 情報ステーション
+# 卓上時計 & 画像ビューワー
 
 <img src="images/cover.jpg" width="640px">
 
-Cheap Yellow Display（ESP32-2432S028 相当）をデスクに置く情報表示デバイスにするスケッチです。
+Cheap Yellow Display（ESP32-2432S028 相当）を、デスクに置く情報表示デバイスにするスケッチです。
 
 - NTP同期の時計（年・月・日・曜日・時・分・秒）
 - WiFi設定はUSBシリアル経由
